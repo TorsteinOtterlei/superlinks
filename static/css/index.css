@@ -1,0 +1,257 @@
+
+body {
+    height:100vh;
+    margin:0;
+    display:flex; 
+    flex-direction:column; 
+    background: #212432;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header {
+    min-height:66px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 50px;
+    background-image: linear-gradient(to right, rgb(79, 172, 254) 0%, rgb(0, 242, 254) 100%);
+    border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+}
+
+
+.link-container {
+    display: flex;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    max-width: 280px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+    margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+    position: relative;
+    flex: 1 0 21%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid rgba(0, 40, 100, 0.12);
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    margin: 0;
+    /* padding: 1.5rem 1.5rem; */
+    position: relative;
+}
+
+.link-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+}
+
+.link-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    padding: 0.5rem 0.5rem 0.5rem 0.2rem;
+}
+
+
+
+.footer-body {
+    display: flex;
+    justify-content: space-between;
+    border-top:1px solid #3a3d4d;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-body p {
+    color: #7b7f92;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.plus-button {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(103, 103, 103);
+    background-color: #4caf4f00;
+    border-style: solid;
+    border-radius: 50%;
+}
+  
+.plus-button:hover , .add-remove-link-button:hover{
+    opacity: 0.5;
+}
+
+.plus-button:active {
+    background-color:#3a3d4d;
+    box-shadow: 0 2px #666; 
+    transform: translateY(2px);
+}
+
+.open-modal-button {
+    width: 100%;
+}
+
+.add-remove-link-button {
+    padding: 0px;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.add-remove-link-button:active {
+    
+}
+  
+
+
+footer {
+    display: flex;
+
+    max-width: 1200px;
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    min-height:50px;
+    margin-top:auto;
+    background:#212432;
+}
+
+
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+  /* Modal Content/Box */
+.modal-content {
+  max-width: 1000px;
+  background-color: #fefefe;
+  margin: 7% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #888;
+  border-width: 2px;
+}
+  
+  /* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Variables
+================================== */
+/* Tables
+================================== */
+.Rtable {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3em 0;
+    padding: 0;
+    margin: 0px;
+}
+.Rtable-cell {
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    width: 100%;
+    padding: 0.8em 1.2em;
+    overflow: hidden;
+    list-style: none;
+    border: solid 3px white;
+    background: rgba(112, 128, 144, 0.2);
+ }
+  .Rtable-cell > h1,
+  .Rtable-cell > h2,
+  .Rtable-cell > h3,
+  .Rtable-cell > h4,
+  .Rtable-cell > h5,
+  .Rtable-cell > h6 {
+    margin: 0;
+}
+  /* Table column sizing
+  ================================== */
+.Rtable--2cols > .Rtable-cell {
+    width: 50%;
+}
+.Rtable--3cols > .Rtable-cell {
+    width: 33.33%;
+}
+.Rtable--4cols > .Rtable-cell {
+    width: 25%;
+}
+.Rtable--5cols > .Rtable-cell {
+    width: 20%;
+}
+.Rtable--6cols > .Rtable-cell {
+    width: 16.6%;
+}
+
+
+input {
+    width: 100%;
+}
